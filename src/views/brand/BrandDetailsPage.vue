@@ -2,7 +2,7 @@
   <div v-if="isLoading" class="p-5 flex justify-center items-center">
     <InLoading />
   </div>
-  <div class="flex gap-2 p-4" v-else>
+  <div class="flex flex-col gap-2 p-10" v-else>
     <EditBrand
       v-if="shouldOpenEditModalForm"
       :brand="brand"

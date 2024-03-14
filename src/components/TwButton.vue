@@ -3,7 +3,7 @@
     :data-test="cta"
     :disabled="disabled || isLoading"
     :class="[
-      'font-bold outline-none flex justify-center items-center rounded px-2 py-1',
+      'font-bold outline-none text-xs flex justify-center items-center rounded px-2 py-1',
       theme.toLowerCase(),
       { 'cursor-pointer': !disabled || !isLoading },
     ]"

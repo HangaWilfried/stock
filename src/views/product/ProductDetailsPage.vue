@@ -2,7 +2,7 @@
   <div v-if="isLoading" class="p-5 flex justify-center items-center">
     <InLoading />
   </div>
-  <div class="flex gap-2 p-4" v-else>
+  <div class="flex flex-col gap-2 p-10" v-else>
     <EditProduct
       v-if="shouldOpenEditModalForm"
       :product="product"
@@ -33,13 +33,13 @@
       </div>
     </div>
     <div
-      class="bg-white rounded-lg p-10 flex justify-between gap-2 border border-gray-600"
+      class="bg-white rounded-lg p-10 flex gap-5 border border-gray-600"
     >
-      <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-5 shrink-0">
         <span>{{ t("createdAt") }}</span>
         <span>{{ getLocalDateTime(product.createdAt) }}</span>
       </div>
-      <div class="border-l border-gray-100 pl-4 flex flex-col gap-4">
+      <div class="border-l border-gray-100 pl-4 flex flex-col gap-4 basis-full">
         <h2>{{ t("editionDates") }}</h2>
         <div
           v-for="editionDate in product.editionDates"

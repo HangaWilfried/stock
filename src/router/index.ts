@@ -10,6 +10,12 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: "/products",
+      redirect: to => {
+        return { path: "/", query: { page: "products" } }
+      },
+    },
+    {
       path: "/",
       name: "products list page",
       component: () => import("@/views/product/ProductsListPage.vue"),
